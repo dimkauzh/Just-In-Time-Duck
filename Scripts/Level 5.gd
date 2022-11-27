@@ -5,12 +5,15 @@ var door_open : bool = false
 func _on_Spikes_body_entered(_body):
 	get_tree().reload_current_scene()
 
-func _on_Sidefall_body_entered(_body):
-	pass # Replace with function body.
+func _on_SidefallLeft_body_entered(body):
+	body.position.x = 602
+	
+func _on_SidefallRight_body_entered(body):
+	body.position.x = 0
 
 func _process(_delta):
 	if door_open and Input.is_action_pressed("ui_down"):
-		get_tree().change_scene("res://Scenes/Level 5.tscn")
+		get_tree().change_scene("res://Scenes/The End.tscn")
 func _on_Door_Key_door_open():
 	door_open = true
 

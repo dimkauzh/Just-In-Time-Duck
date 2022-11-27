@@ -30,7 +30,11 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/pbmirror/plugin.cfg" )
+enabled=PoolStringArray(  )
+
+[gdnative]
+
+singletons=[  ]
 
 [gui]
 
@@ -77,6 +81,10 @@ ui_down={
 2d_physics/layer_5="Key"
 2d_physics/layer_6="Door_Key"
 2d_physics/layer_7="Menu"
+
+[mono]
+
+project/assembly_name="Just In Time Duck!"
 
 [physics]
 

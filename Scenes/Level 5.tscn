@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tileset/Map.tres" type="TileSet" id=2]
+[ext_resource path="res://Art Assets/Background/Sky.png" type="Texture" id=3]
+[ext_resource path="res://Tileset/Spikes.tres" type="TileSet" id=4]
+[ext_resource path="res://Scripts/Level 5.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Door_Key.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.5, 148.5 )
+
+[node name="Level_5" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Map" type="TileMap" parent="."]
+scale = Vector2( 2.5, 2.5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -196600, 8, 0, -131065, 536870920, 0, -131063, 8, 0, -2, 8, 0, -1, 536870920, 0, -65536, 536870920, 0, -65535, 536870920, 0, -65534, 536870920, 0, -65533, 536870920, 0, -65532, 536870920, 0, -65531, 536870920, 0, -65530, 536870920, 0, -65529, 536870920, 0, -65527, 8, 0, -65526, 8, 0, -65525, 536870920, 0, -65524, 536870920, 0, -65523, 536870920, 0, -65522, 536870920, 0, -65521, 536870920, 0, -65520, 8, 0, 65534, 8, 0, 1, 1073741824, 0, 2, 1073741825, 0, 3, 1073741825, 0, 4, 1073741825, 0, 5, 1073741825, 0, 6, 1073741826, 0, 13, 1073741839, 0, 16, 8, 0, 131070, 8, 0, 65552, 8, 0, 196606, 8, 0, 131088, 8, 0, 262142, 8, 0, 196616, 13, 0, 196617, 17, 0, 196620, 15, 0, 196624, 8, 0, 327678, 8, 0, 262145, 15, 0, 262156, 16, 0, 262160, 8, 0, 393214, 8, 0, 327681, 16, 0, 327686, 15, 0, 327696, 8, 0, 458750, 8, 0, 393222, 16, 0, 393232, 8, 0, 524286, 8, 0, 458768, 8, 0, 589822, 8, 0, 589823, 536870920, 0, 524288, 15, 0, 524292, 15, 0, 524303, 536870920, 0, 524304, 8, 0, 655359, 536870920, 0, 589824, 11, 0, 589828, 16, 0, 589830, 15, 0, 589834, 536870914, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 536870920, 0, 720895, 536870920, 0, 655360, 11, 0, 655362, 15, 0, 655366, 11, 0, 655369, 13, 0, 655370, 19, 0, 655371, 536870920, 0, 655372, 536870920, 0, 655373, 536870920, 0, 655374, 536870915, 0, 655375, 536870920, 0, 786431, 536870920, 0, 720896, 11, 0, 720898, 11, 0, 720902, 11, 0, 720906, 536870917, 0, 720907, 536870920, 0, 720908, 536870920, 0, 720909, 536870920, 0, 720910, 536870915, 0, 720911, 536870920, 0, 851967, 536870920, 0, 786432, 11, 0, 786434, 11, 0, 786438, 11, 0, 786442, 536870917, 0, 786443, 536870920, 0, 786444, 536870920, 0, 786445, 536870920, 0, 786446, 536870915, 0, 786447, 536870920, 0, 917503, 536870920, 0, 851968, 18, 0, 851969, 10, 0, 851970, 14, 0, 851971, 10, 0, 851972, 10, 0, 851973, 10, 0, 851974, 14, 0, 851978, 19, 0, 851979, 536870920, 0, 851980, 536870920, 0, 851981, 536870920, 0, 851982, 536870915, 0, 851983, 536870920, 0, 983039, 536870920, 0, 917504, 536870920, 0, 917505, 536870920, 0, 917506, 536870920, 0, 917507, 536870920, 0, 917508, 536870920, 0, 917509, 536870920, 0, 917510, 536870920, 0, 917514, 536870920, 0, 917515, 536870920, 0, 917516, 536870920, 0, 917517, 536870920, 0, 917518, 536870920, 0, 917519, 536870920, 0 )
+
+[node name="Door_Key" parent="." instance=ExtResource( 7 )]
+position = Vector2( 359, 80 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Key" parent="." instance=ExtResource( 6 )]
+position = Vector2( 99, 382 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+unique_name_in_owner = true
+position = Vector2( 501, 96 )
+
+[node name="Sidefall-Left" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sidefall-Left"]
+position = Vector2( -24, 161 )
+shape = SubResource( 1 )
+
+[node name="Sidefall-Right" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sidefall-Right"]
+position = Vector2( 625, 162 )
+shape = SubResource( 1 )
+
+[node name="Downfall" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Downfall"]
+position = Vector2( 337, 630 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Spikes" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="TileMap" type="TileMap" parent="Spikes"]
+scale = Vector2( 2.5, 2.5 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 16, 0, 0, 8, 0, 0 )
+collision_use_parent = true
+format = 1
+tile_data = PoolIntArray( 131074, 1073741824, 0, 131076, 1073741824, 0, 131078, 1073741824, 0, 131080, 1073741824, 0, 131082, 1073741824, 0, 131084, 1073741824, 0, 131098, 1073741824, 0, 1114124, 0, 0, 1114132, 0, 0, 1114134, 0, 0, 1114136, 0, 0, 1114138, 0, 0, 1114140, 0, 0, 1245198, -1610612736, 0, 1376270, -1610612736, 0, 1507342, -1610612736, 0, 1507347, -2147483648, 0, 1638402, 0, 0, 1638406, 0, 0, 1638414, -1610612736, 0, 1638419, -2147483648, 0 )
+
+[connection signal="door_closed" from="Door_Key" to="." method="_on_Door_Key_door_closed"]
+[connection signal="door_open" from="Door_Key" to="." method="_on_Door_Key_door_open"]
+[connection signal="key_collected" from="Key" to="Door_Key" method="_on_Key_key_collected"]
+[connection signal="body_entered" from="Sidefall-Left" to="." method="_on_SidefallLeft_body_entered"]
+[connection signal="body_entered" from="Sidefall-Right" to="." method="_on_SidefallRight_body_entered"]
+[connection signal="body_entered" from="Downfall" to="Player" method="_on_Downfall_body_entered"]
+[connection signal="body_entered" from="Spikes" to="." method="_on_Spikes_body_entered"]
