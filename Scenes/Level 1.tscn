@@ -68,7 +68,7 @@ cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 16, 0, 0, 8, 0, 0 )
 collision_use_parent = true
 format = 1
-tile_data = PoolIntArray( 458756, 0, 0, 458757, 0, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 1114125, 0, 0, 1114126, 0, 0, 1376261, 0, 0, 1376262, 0, 0 )
+tile_data = PoolIntArray( 131083, 1610612736, 0, 131084, 1610612736, 0, 131085, 1610612736, 0, 131086, 1610612736, 0, 458756, 0, 0, 458757, 0, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 1048579, 1610612736, 0, 1048583, 1610612736, 0, 1114125, 0, 0, 1114126, 0, 0, 1376261, 0, 0 )
 
 [connection signal="door_closed" from="Door_Key" to="." method="_on_Door_Key_door_closed"]
 [connection signal="door_open" from="Door_Key" to="." method="_on_Door_Key_door_open"]
