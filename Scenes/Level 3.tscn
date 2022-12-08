@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset/Map.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Door_Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Art Assets/UI/Main-Menu-Font.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scenes/Hit-Spikes.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.5, 176 )
@@ -60,10 +61,10 @@ position = Vector2( 337, 630 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="Spikes" type="Area2D" parent="."]
+[node name="Spikes" type="Area2D" parent="." groups=["Spikes"]]
 collision_layer = 8
 
-[node name="TileMap" type="TileMap" parent="Spikes"]
+[node name="TileMap" type="TileMap" parent="Spikes" groups=["Spikes"]]
 scale = Vector2( 2.5, 2.5 )
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 8, 8 )
@@ -71,6 +72,8 @@ cell_custom_transform = Transform2D( 16, 0, 0, 8, 0, 0 )
 collision_use_parent = true
 format = 1
 tile_data = PoolIntArray( 131072, 1073741824, 0, 131074, 1073741824, 0, 131076, 1073741824, 0, 131078, 1073741824, 0, 131080, 1073741824, 0, 131082, 1073741824, 0, 131084, 1073741824, 0, 131086, 1073741824, 0, 131094, 1073741824, 0, 131096, 1073741824, 0, 131098, 1073741824, 0, 131100, 1073741824, 0, 196608, -1610612736, 0, 196637, -1073741824, 0, 327680, -1610612736, 0, 327709, -1073741824, 0, 458752, -1610612736, 0, 458781, -1073741824, 0, 589824, 0, 0, 589826, 0, 0, 589828, 0, 0, 589830, 0, 0, 589853, -1073741824, 0, 720904, -1610612736, 0, 720922, 0, 0, 720924, 0, 0, 1114124, 0, 0, 1114132, 0, 0, 1114134, 0, 0, 1114136, 0, 0, 1245198, -1610612736, 0, 1245203, -2147483648, 0, 1376270, -1610612736, 0, 1376275, -2147483648, 0, 1441794, 1610612736, 0, 1441796, 1610612736, 0, 1441798, 1610612736, 0, 1441800, 1610612736, 0, 1441802, 1610612736, 0, 1507342, -1610612736, 0, 1507347, -2147483648, 0, 1638402, 536870912, 0, 1638404, 536870912, 0, 1638406, 536870912, 0, 1638408, 536870912, 0, 1638410, 536870912, 0, 1638414, -1610612736, 0, 1638419, -2147483648, 0 )
+
+[node name="Hit-Spikes + Timer" parent="Spikes" instance=ExtResource( 9 )]
 
 [node name="Label" type="Label" parent="."]
 margin_left = 456.0
@@ -87,3 +90,4 @@ teleports you!"
 [connection signal="body_entered" from="Sidefall" to="." method="_on_Sidefall_body_entered"]
 [connection signal="body_entered" from="Downfall" to="Player" method="_on_Downfall_body_entered"]
 [connection signal="body_entered" from="Spikes" to="." method="_on_Spikes_body_entered"]
+[connection signal="timer_over" from="Spikes/Hit-Spikes + Timer" to="." method="_on_HitSpikes__Timer_timer_over"]

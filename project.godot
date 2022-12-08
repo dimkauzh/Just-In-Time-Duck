@@ -81,6 +81,7 @@ ui_down={
 2d_physics/layer_5="Key"
 2d_physics/layer_6="Door_Key"
 2d_physics/layer_7="Menu"
+2d_physics/layer_8="Spikes-Checker"
 
 [mono]
 

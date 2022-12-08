@@ -8,6 +8,7 @@ onready var anim = $Anim
 var jumping = false
 onready var timer = $Timer
 onready var animj = $AnimationPlayer
+onready var audio_jump = $"Jump-Sound"
 var jump_count = 0
 export var extrajumps = 1
 
@@ -20,6 +21,7 @@ func get_input():
 	if jump and jump_count < extrajumps:
 		vel.y = -jump_speed
 		animj.play("jump")
+		audio_jump.play()
 		timer.start()
 		jump_count += 1
 		
@@ -60,3 +62,4 @@ func _on_Sidefall_body_entered(_body):
 func _on_Downfall_body_entered(_body):
 	position.y = -30
 	vel.y = 0
+

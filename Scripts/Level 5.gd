@@ -3,7 +3,12 @@ extends Node2D
 var door_open : bool = false
 
 func _on_Spikes_body_entered(_body):
+	$"Spikes/Hit-Spikes + Timer".play()
+	$"Spikes/Hit-Spikes + Timer/Timer".start()
+
+func _on_HitSpikes__Timer_timer_over():
 	get_tree().reload_current_scene()
+
 
 func _on_SidefallLeft_body_entered(body):
 	body.position.x = 602
