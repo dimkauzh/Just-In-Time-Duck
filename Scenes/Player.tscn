@@ -30,7 +30,7 @@ animations = [ {
 "frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "walk",
-"speed": 7.0
+"speed": 10.0
 } ]
 
 [sub_resource type="Animation" id=7]
@@ -77,7 +77,7 @@ shape = SubResource( 4 )
 [node name="Anim" type="AnimatedSprite" parent="."]
 position = Vector2( -5.96046e-08, 0 )
 frames = SubResource( 3 )
-animation = "idle"
+animation = "walk"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
