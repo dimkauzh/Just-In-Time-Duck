@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset/Map.tres" type="TileSet" id=2]
 [ext_resource path="res://Art Assets/Background/Sky.png" type="Texture" id=3]
 [ext_resource path="res://Tileset/Spikes.tres" type="TileSet" id=4]
-[ext_resource path="res://Scripts/Level 12.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Level 13.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Door_Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Hit-Spikes.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.25, 101 )
@@ -78,6 +79,9 @@ format = 1
 
 [node name="Hit-Spikes + Timer" parent="Spikes" instance=ExtResource( 8 )]
 
+[node name="Lever" parent="." instance=ExtResource( 9 )]
+position = Vector2( 334, 302 )
+
 [connection signal="door_closed" from="Door_Key" to="." method="_on_Door_Key_door_closed"]
 [connection signal="door_open" from="Door_Key" to="." method="_on_Door_Key_door_open"]
 [connection signal="key_collected" from="Key" to="Door_Key" method="_on_Key_key_collected"]
@@ -86,3 +90,5 @@ format = 1
 [connection signal="body_entered" from="Downfall" to="Player" method="_on_Downfall_body_entered"]
 [connection signal="body_entered" from="Spikes" to="." method="_on_Spikes_body_entered"]
 [connection signal="timer_over" from="Spikes/Hit-Spikes + Timer" to="." method="_on_HitSpikes__Timer_timer_over"]
+[connection signal="lever_closed" from="Lever" to="." method="_on_Lever_lever_closed"]
+[connection signal="lever_open" from="Lever" to="." method="_on_Lever_lever_open"]
