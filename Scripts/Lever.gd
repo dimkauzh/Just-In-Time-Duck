@@ -1,6 +1,5 @@
 extends Node2D
 
-onready var anim = $AnimatedSprite
 onready var lever_open = $open
 onready var lever_close = $close
 onready var timer = $Timer
