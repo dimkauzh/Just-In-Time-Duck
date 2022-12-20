@@ -25,3 +25,11 @@ func _on_Door_Key_door_open():
 
 func _on_Door_Key_door_closed():
 	door_open = false
+
+func _on_Lever_lever_closed():
+	print("Lever Closed")
+	$RigidBody2D/Sprite2.visible = true
+func _on_Lever_lever_open():
+	print("Lever Open")
+	$RigidBody2D/AnimationPlayer.play("wall_close")
+	$RigidBody2D/Sprite2.visible = false
