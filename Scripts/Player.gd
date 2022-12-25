@@ -18,7 +18,7 @@ func get_input():
 	var left = Input.is_action_pressed('ui_left')
 	var jump = Input.is_action_just_pressed("ui_up")
 	
-	if jump and jump_count < extrajumps:
+	if jump and jump_count <= extrajumps:
 		vel.y = -jump_speed
 		animj.play("jump")
 		audio_jump.play()
