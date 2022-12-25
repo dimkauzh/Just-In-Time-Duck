@@ -10,32 +10,26 @@ onready var timer = $Timer
 onready var animj = $AnimationPlayer
 onready var audio_jump = $"Jump-Sound"
 var jump_count = 0
-export var extrajumps = 1
+export var max_jumps = 2
 
 func get_input():
-	vel.x = 0
-	var right = Input.is_action_pressed('ui_right')
-	var left = Input.is_action_pressed('ui_left')
-	var jump = Input.is_action_just_pressed("ui_up")
-	
-	if jump and jump_count <= extrajumps:
-		vel.y = -jump_speed
-		animj.play("jump")
-		audio_jump.play()
-		timer.start()
+	vel.x = 0	
+	if Input.is_action_just_pressed("ui_up"):
 		jump_count += 1
+		if jump_count <= max_jumps:
+			vel.y = -jump_speed
+			animj.play("jump")
+			audio_jump.play()
+			timer.start()
 		
-	if is_on_floor():
-		jump_count = 0
-		
-	if right:
+	if Input.is_action_pressed("ui_right"):
 		vel.x += speed
 		anim.flip_h = false
 		if is_on_floor():
 			anim.play("walk")
 		else:
 			anim.play("idle")
-	elif left:
+	elif Input.is_action_pressed("ui_left"):
 		vel.x -= speed
 		anim.flip_h = true
 		if is_on_floor():
@@ -49,6 +43,8 @@ func get_input():
 		
 func _physics_process(delta):
 	vel.y += gravity * delta
+	if is_on_floor():
+		jump_count = 0
 	get_input()
 	
 	vel = move_and_slide(vel, Vector2.UP)
