@@ -60,7 +60,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), null ]
 }
 
-[node name="RigidBody2D" type="StaticBody2D"]
+[node name="Moving Wall" type="StaticBody2D"]
 position = Vector2( 2, 0 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )

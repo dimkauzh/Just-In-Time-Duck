@@ -27,8 +27,8 @@ func _on_Door_Key_door_closed():
 
 func _on_Lever_lever_closed():
 	print("Lever Closed")
-	$RigidBody2D/Sprite2.visible = true
+	$"Moving Wall/Sprite2".visible = true
 func _on_Lever_lever_open():
 	print("Lever Open")
-	$RigidBody2D/AnimationPlayer.play("wall_close")
-	$RigidBody2D/Sprite2.visible = false
+	$"Moving Wall/AnimationPlayer".play("wall_close")
+	$"Moving Wall/Sprite2".visible = false

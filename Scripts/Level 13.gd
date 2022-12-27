@@ -11,11 +11,10 @@ func _on_HitSpikes__Timer_timer_over():
 
 func _on_SidefallLeft_body_entered(body):
 	body.position.x = 600
-	body.position.y = 80
 	
 func _on_SidefallRight_body_entered(body):
 	body.position.x = 0
-	body.position.y = 430
+	body.position.y = 217
 
 func _process(_delta):
 	if door_open and Input.is_action_pressed("ui_down"):

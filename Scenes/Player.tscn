@@ -94,4 +94,20 @@ stream = ExtResource( 4 )
 volume_db = -5.244
 autoplay = true
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+enabled = true
+cast_to = Vector2( 0, 22.4 )
+collision_mask = 2
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+enabled = true
+cast_to = Vector2( -12.7273, 20.8 )
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+enabled = true
+cast_to = Vector2( 12.7273, 20.8 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

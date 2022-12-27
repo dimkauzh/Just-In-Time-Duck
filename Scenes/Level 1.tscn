@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset/Map.tres" type="TileSet" id=2]
@@ -8,9 +8,14 @@
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Door_Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Hit-Spikes.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Art Assets/UI/Main-Menu-Font.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.5, 176 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+font_data = ExtResource( 9 )
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource( 5 )
@@ -72,6 +77,15 @@ format = 1
 tile_data = PoolIntArray( 131083, 1610612736, 0, 131084, 1610612736, 0, 131085, 1610612736, 0, 131086, 1610612736, 0, 458756, 0, 0, 458757, 0, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 1048579, 1610612736, 0, 1048583, 1610612736, 0, 1114125, 0, 0, 1114126, 0, 0, 1376261, 0, 0 )
 
 [node name="Hit-Spikes" parent="Spikes" instance=ExtResource( 8 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 363.0
+margin_top = 120.0
+margin_right = 576.0
+margin_bottom = 189.0
+custom_fonts/font = SubResource( 2 )
+text = "Hint: You can double-jump
+and wall-jump!"
 
 [connection signal="door_closed" from="Door_Key" to="." method="_on_Door_Key_door_closed"]
 [connection signal="door_open" from="Door_Key" to="." method="_on_Door_Key_door_open"]

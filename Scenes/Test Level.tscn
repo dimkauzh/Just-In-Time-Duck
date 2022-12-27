@@ -1,10 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset/Map.tres" type="TileSet" id=2]
 [ext_resource path="res://Art Assets/Background/Sky.png" type="Texture" id=3]
 [ext_resource path="res://Tileset/Spikes.tres" type="TileSet" id=4]
-[ext_resource path="res://Scripts/Level 15.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Level 14.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Door_Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Hit-Spikes.tscn" type="PackedScene" id=8]
@@ -12,12 +12,9 @@
 [ext_resource path="res://Scenes/Moving-Wall.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.50065, 268 )
+extents = Vector2( 8.25, 101 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 57.5, 10 )
-
-[node name="level_15" type="Node2D"]
+[node name="Test Level" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -34,40 +31,41 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -393212, 0, 0, -393209, 0, 0, -327676, 0, 0, -327673, 0, 0, -262140, 0, 0, -262137, 0, 0, -196604, 0, 0, -196601, 0, 0, -131068, 0, 0, -131065, 0, 0, -2, 8, 0, -1, -1073741816, 0, -65536, -1073741816, 0, -65535, -1073741816, 0, -65534, -1073741816, 0, -65533, 8, 0, -65532, 11, 0, -65529, 11, 0, -65528, 8, 0, -65527, 8, 0, -65526, 8, 0, -65525, 8, 0, -65524, 8, 0, -65523, 8, 0, -65522, 8, 0, -65521, 8, 0, -65520, 8, 0, 65534, 8, 0, 4, 11, 0, 7, 11, 0, 16, 8, 0, 131070, 8, 0, 65540, 11, 0, 65543, 11, 0, 65552, 8, 0, 196606, 8, 0, 131076, 11, 0, 131079, 11, 0, 131088, 8, 0, 262142, 8, 0, 196608, 1, 0, 196609, 17, 0, 196612, 11, 0, 196615, 3, 0, 196616, 10, 0, 196617, 10, 0, 196618, 10, 0, 196619, 10, 0, 196620, 10, 0, 196621, 20, 0, 196622, 20, 0, 196624, 8, 0, 327678, 8, 0, 262144, 6, 0, 262148, 11, 0, 262151, 3, 0, 262152, 8, 0, 262153, 8, 0, 262154, 8, 0, 262155, 8, 0, 262156, 6, 0, 262160, 8, 0, 393214, 8, 0, 327684, 3, 0, 327685, 1, 0, 327686, 1, 0, 327687, 8, 0, 327688, 8, 0, 327689, 8, 0, 327690, 8, 0, 327691, 6, 0, 327696, 8, 0, 458750, 8, 0, 393219, 0, 0, 393220, 8, 0, 393221, 8, 0, 393222, 8, 0, 393223, 8, 0, 393224, 8, 0, 393225, 8, 0, 393226, 5, 0, 393232, 8, 0, 524286, 8, 0, 458752, 0, 0, 458753, 1, 0, 458754, 20, 0, 458755, 7, 0, 458756, 7, 0, 458757, 7, 0, 458758, 7, 0, 458759, 8, 0, 458760, 8, 0, 458761, 8, 0, 458762, 5, 0, 458765, 13, 0, 458766, 1, 0, 458768, 8, 0, 589822, 8, 0, 524288, 3, 0, 524289, 6, 0, 524295, 3, 0, 524296, 8, 0, 524297, 8, 0, 524298, 5, 0, 524302, 4, 0, 524304, 8, 0, 655358, 8, 0, 589824, 16, 0, 589831, 3, 0, 589832, 8, 0, 589833, 8, 0, 589834, 5, 0, 589840, -1073741816, 0, 720894, 8, 0, 655367, 3, 0, 655368, 8, 0, 655369, 8, 0, 655370, 8, 0, 655371, 17, 0, 655376, 536870920, 0, 786430, 536870920, 0, 720900, 0, 0, 720903, 3, 0, 720904, 8, 0, 720905, 8, 0, 720906, 5, 0, 720912, 536870920, 0, 851966, 536870920, 0, 786435, 0, 0, 786436, 8, 0, 786439, 3, 0, 786440, 8, 0, 786441, 8, 0, 786442, 5, 0, 786448, 8, 0, 917502, 536870920, 0, 851968, 0, 0, 851969, 1, 0, 851970, 1, 0, 851971, 8, 0, 851972, 8, 0, 851975, 3, 0, 851976, 8, 0, 851977, 8, 0, 851978, 8, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851984, 536870920, 0, 983038, 536870920, 0, 983039, 536870920, 0, 917504, 8, 0, 917519, 536870920, 0, 917520, 536870920, 0, 1048574, 8, 0, 1048575, 8, 0, 983040, 8, 0, 983041, 8, 0, 983042, 8, 0, 983043, 8, 0, 983044, 8, 0, 983045, 8, 0, 983046, 8, 0, 983047, 8, 0, 983048, 8, 0, 983049, 8, 0, 983050, 8, 0, 983051, 8, 0, 983052, 8, 0, 983053, 8, 0, 983054, 8, 0, 983055, 8, 0, 983056, 8, 0 )
+tile_data = PoolIntArray( -2, 8, 0, -1, -1073741816, 0, -65536, -1073741816, 0, -65535, -1073741816, 0, -65534, -1073741816, 0, -65533, -1073741815, 0, -65530, 8, 0, -65529, 8, 0, -65528, 8, 0, -65527, 8, 0, -65526, 8, 0, -65525, 8, 0, -65524, 8, 0, -65523, 8, 0, -65522, 8, 0, -65521, 8, 0, -65520, 8, 0, 65534, 8, 0, 16, 8, 0, 131070, 8, 0, 65552, 8, 0, 196606, 8, 0, 131088, 8, 0, 262142, 8, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196624, 8, 0, 327678, 8, 0, 262160, 8, 0, 393214, 8, 0, 327696, 8, 0, 458750, 8, 0, 393232, 8, 0, 524286, 8, 0, 458768, 8, 0, 589822, 8, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524304, 8, 0, 655358, 8, 0, 589840, -1073741816, 0, 720894, 8, 0, 655376, 536870920, 0, 786430, 536870920, 0, 720912, 536870920, 0, 851966, 536870920, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786448, 8, 0, 917502, 536870920, 0, 851984, 536870920, 0, 983038, 536870920, 0, 983039, 536870920, 0, 917504, 8, 0, 917519, 536870920, 0, 917520, 536870920, 0, 1048574, 8, 0, 1048575, 8, 0, 983040, 8, 0, 983041, 8, 0, 983042, 8, 0, 983043, 8, 0, 983044, 8, 0, 983045, 8, 0, 983046, 8, 0, 983047, 8, 0, 983048, 8, 0, 983049, 8, 0, 983050, 8, 0, 983051, 8, 0, 983052, 8, 0, 983053, 8, 0, 983054, 8, 0, 983055, 8, 0, 983056, 8, 0 )
 
 [node name="Door_Key" parent="." instance=ExtResource( 7 )]
-position = Vector2( 241, 161 )
+position = Vector2( 917, 509 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="Key" parent="." instance=ExtResource( 6 )]
-position = Vector2( 471, 495 )
+position = Vector2( 1035, 332 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 unique_name_in_owner = true
-position = Vector2( 500, 72 )
+position = Vector2( 50.0001, 89 )
 
 [node name="Sidefall-Left" type="Area2D" parent="."]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sidefall-Left"]
-position = Vector2( -18, 274 )
+position = Vector2( -24, 205 )
 shape = SubResource( 1 )
 
 [node name="Sidefall-Right" type="Area2D" parent="."]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sidefall-Right"]
-position = Vector2( 620, 278 )
+position = Vector2( 621, 116 )
 shape = SubResource( 1 )
 
 [node name="Downfall" type="Area2D" parent="."]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Downfall"]
-position = Vector2( 242.5, 581 )
-shape = SubResource( 2 )
+position = Vector2( 200, 582 )
+rotation = 1.5708
+shape = SubResource( 1 )
 
 [node name="Spikes" type="Area2D" parent="." groups=["Spikes"]]
 collision_layer = 8
@@ -83,11 +81,11 @@ format = 1
 [node name="Hit-Spikes + Timer" parent="Spikes" instance=ExtResource( 8 )]
 
 [node name="Lever" parent="." instance=ExtResource( 9 )]
-position = Vector2( 337, 64 )
-rotation = 1.5708
+position = Vector2( 935, 159 )
+rotation = -1.5708
 
-[node name="Moving Wall" parent="." instance=ExtResource( 10 )]
-position = Vector2( 246, 457 )
+[node name="RigidBody2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1182, 394 )
 rotation = 1.5708
 
 [connection signal="door_closed" from="Door_Key" to="." method="_on_Door_Key_door_closed"]
