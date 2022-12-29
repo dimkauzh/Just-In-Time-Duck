@@ -31,4 +31,4 @@ func _on_Lever_lever_closed():
 func _on_Lever_lever_open():
 	print("Lever Open")
 	$"Moving Wall/AnimationPlayer".play("wall_close")
-	$"Moving Wall/Sprite2".visible = false
+	$"Moving Wall/Sprite2".visibles = false

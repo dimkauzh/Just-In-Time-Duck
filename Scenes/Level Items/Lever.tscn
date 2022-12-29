@@ -24,6 +24,7 @@ texture = ExtResource( 3 )
 texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_Lever_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Lever_body_exited"]
