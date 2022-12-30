@@ -4,7 +4,7 @@
 [ext_resource path="res://Tileset/Map.tres" type="TileSet" id=2]
 [ext_resource path="res://Art Assets/Background/Sky.png" type="Texture" id=3]
 [ext_resource path="res://Tileset/Spikes.tres" type="TileSet" id=4]
-[ext_resource path="res://Scripts/Level 4.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Levels/Level 4.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Level Items/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Level Items/Door_Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Music/Hit-Spikes.tscn" type="PackedScene" id=8]

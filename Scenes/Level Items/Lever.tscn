@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Art Assets/Levers/tile_0066.png" type="Texture" id=2]
 [ext_resource path="res://Art Assets/Levers/tile_0064.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/Lever.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Level items/Lever.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.75, 4.75 )

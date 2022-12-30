@@ -3,7 +3,7 @@
 [ext_resource path="res://Art Assets/UI/TheEnd.png" type="Texture" id=1]
 [ext_resource path="res://Art Assets/Background/Background-TheEndScreen.png" type="Texture" id=2]
 [ext_resource path="res://Art Assets/UI/Main-Menu-Font.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Scripts/The End.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Menu/The End.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 39

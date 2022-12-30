@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Art Assets/Props/Door (32x32).png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Door_Key.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Level items/Door_Key.gd" type="Script" id=2]
 [ext_resource path="res://Art Assets/Input Art/tile_0168.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
