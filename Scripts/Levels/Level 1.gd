@@ -11,7 +11,7 @@ func _on_HitSpikes_timer_over():
 
 func _process(_delta):
 	if door_open and Input.is_action_pressed("ui_down"):
-		get_tree().change_scene("res://Scenes/Level 2.tscn")
+		get_tree().change_scene("res://Scenes/Levels/Level 2.tscn")
 
 func _on_Door_Key_door_open():
 	door_open = true

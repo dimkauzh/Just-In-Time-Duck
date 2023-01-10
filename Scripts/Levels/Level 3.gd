@@ -15,7 +15,7 @@ func _on_Sidefall_body_entered(_body):
 
 func _process(_delta):
 	if door_open and Input.is_action_pressed("ui_down"):
-		get_tree().change_scene("res://Scenes/Level 4.tscn")
+		get_tree().change_scene("res://Scenes/Levels/Level 4.tscn")
 
 func _on_Door_Key_door_open():
 	door_open = true
