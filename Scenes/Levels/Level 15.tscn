@@ -88,7 +88,7 @@ position = Vector2( 337, 64 )
 rotation = 1.5708
 
 [node name="Moving Wall" parent="." instance=ExtResource( 10 )]
-position = Vector2( 246, 457 )
+position = Vector2( 246, 465 )
 rotation = 1.5708
 
 [connection signal="door_closed" from="Door_Key" to="." method="_on_Door_Key_door_closed"]

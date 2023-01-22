@@ -41,7 +41,7 @@ scale = Vector2( 2.5, 2.5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 unique_name_in_owner = true
-position = Vector2( 100, 420 )
+position = Vector2( 119, 19 )
 
 [node name="Sidefall-Left" type="Area2D" parent="."]
 collision_layer = 4
