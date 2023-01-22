@@ -17,7 +17,7 @@ func _on_SidefallRight_body_entered(body):
 
 func _process(_delta):
 	if door_open and Input.is_action_pressed("ui_down"):
-		get_tree().change_scene("res://Scenes/Levels/The End.tscn")
+		get_tree().change_scene("res://Scenes/Menu/The End.tscn")
 func _on_Door_Key_door_open():
 	door_open = true
 
@@ -31,4 +31,4 @@ func _on_Lever_lever_closed():
 func _on_Lever_lever_open():
 	print("Lever Open")
 	$"Moving Wall/AnimationPlayer".play("wall_close")
-	$"Moving Wall/Sprite2".visibles = false
+	$"Moving Wall/Sprite2".visible = false
